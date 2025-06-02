@@ -1,0 +1,56 @@
+1. Đường dẫn: https://accounts.saucelabs.com/am/XUI/#login/
+- element Logo: //img[contains(@class,'logo')]
+- element label User Name: //span[(text()='User Name')]
+- element Input Username: //input[@id='idToken1']
+- element label Password: //span[(text()='Password')]
+- element Input Password: //input[@id='idToken2']
+- element checkbox://span[@class='checkmark']
+- element forgot password: //a[contains(text(),'forgot')]
+- element login: //input[@id='loginButton_0']
+- element Google: //a[contains(@title,'Google')]
+- element GitHub: //a[contains(@title,'GitHub')]
+- element SSO: //a[contains(@title,'SSO')]
+- element Try for free: //span[contains(text(),'Not')]/child::a
+
+
+2. Đường dẫn https://saucelabs.com/request-demo
+- element Logo: //img[contains(@src,'logo-black')]
+- element menu
+    + //span[text()='Products']
+    + //span[text()='Solutions']
+    + //span[text()='Pricing']/parent::a
+    + //span[text()='Developers']
+    + //span[text()='Resources']
+    + element Platform for Test: //span[text()='Platform for Test']//self::span[contains(@class,'button')]
+- element Home ://a[@href='/']//span[text()='Home']
+- button Sign in: //button[text()='Sign in']
+- button Request a demo: //button[text()='Request a demo']
+- button Try it free: //button[text()='Try it free']
+- button Search: //button[.//img[@alt='search']]
+- button play video: //button[contains(@class,'MuiIconButton-colorDark')]
+- Các element form nhập thông tin:
+    + input email: //input[@id='Email']
+    + Valid Msg Email: //div[@id='ValidMsgEmail']
+    + input Company: //input[@id='Company']
+    + Message require field Company: //div[@id='ValidMsgCompany']
+    + Interest: //select[@id='Solution_Interest__c']
+    + Message require field Interest: //div[@id='ValidMsgSolution_Interest__c']
+    + Comments: //textarea[@id='Sales_Contact_Comments__c']
+    + checkbox btn: //input[@id='mktoCheckbox_46215_0']
+    + Privacy policy: //a[contains(text(),'Policy')]
+    + Button Let's Talk: //button[@class='mktoButton']
+- Các element Footer:
+  + Logo Footer: //img[contains(@src,'footer-logo')]
+  + Link Platform for Test://h2[contains(text(),'Trusted')]//following::span[contains(text(),'Platform for Test')]/parent::a
+  + Terms of service: //span[text()='Terms of Service']
+  + Policy: //span[text()='Privacy Policy']
+  + EEA: //span[text()='EEA']
+  + CCPA: //span[text()='CCPA']
+  + Cookies Setting: //a[text()='Cookies Settings']
+- Privacy Preference Center
+  + title: h2[@id='ot-pc-title']
+  + //div[@role='alertdialog']
+  + h3 Your privacy: //h3[contains(text(), 'Privacy')]
+  + More information: //a[text()='More information']
+  + Btn confirm my choice: //button[text()='Confirm My Choices']
+  + Btn close: //button[@id='close-pc-btn-handler']
