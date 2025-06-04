@@ -9,7 +9,6 @@ public class GetCurrentUrl {
 
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
-
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://saucelabs.com/");
