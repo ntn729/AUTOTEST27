@@ -1,22 +1,23 @@
-package Lesson11;
+package ExcerciseDay11;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
-public class GetCurrentUrl {
+public class Case1 {
     static WebDriver driver = null;
     private static By emailInput = By.xpath("//input[@id='Email']");
     private static By companyInput = By.name("Company");
+    private static By dropdownInterest = By.id("Solution_Interest__c");
     private static By commentInput = By.cssSelector("#Sales_Contact_Comments__c");
     private static By tryBtn = By.linkText("Try it free");
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-//        driver.get("https://saucelabs.com/");
         driver.get("https://saucelabs.com/request-demo");
         WebElement email = driver.findElement(emailInput);
         email.sendKeys("ntn@gmail.com");
@@ -25,15 +26,16 @@ public class GetCurrentUrl {
         company.clear();
         company.sendKeys("ABC");
 
+        WebElement interestDropdown = driver.findElement(dropdownInterest);
+        Select selectInterest = new Select(interestDropdown);
+        // Chọn theo visible text
+        selectInterest.selectByVisibleText("Mobile Application Testing");
+
         WebElement comments = driver.findElement(commentInput);
         comments.sendKeys("Good");
 
         WebElement tryItFree = driver.findElement(tryBtn);
         tryItFree.click();
-//        driver.navigate().back();
-//        driver.navigate().forward();
-//        String url = driver.getCurrentUrl();
-//        System.out.println("String url la: " + url);
         driver.quit();
     }
 }
