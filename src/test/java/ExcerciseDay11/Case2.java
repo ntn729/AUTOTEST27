@@ -11,7 +11,7 @@ public class Case2 {
     private static By dropdownInterest = By.id("Solution_Interest__c");
     private static By commentInput = By.cssSelector("#Sales_Contact_Comments__c");
     private static By tryBtn = By.linkText("Try it free");
-    private static By dropdownError = By.cssSelector("select.mktoField.mktoInvalid"); // Chỉ ra dropdown bị lỗi (class bị gán khi required field không được chọn)
+    private static By dropdownError = By.cssSelector("select.mktoField.mktoInvalid");
 
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
